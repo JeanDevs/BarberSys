@@ -1,5 +1,7 @@
 C:\Users\JeanTS\Documents\PROYECTOS_APPS\BARBERIA
 https://github.com/JeanDevs/BarberSys
+https://barbersys-beta.vercel.app/
+
 # BarberAI MVP
 ## AI Receptionist para Barberías
 

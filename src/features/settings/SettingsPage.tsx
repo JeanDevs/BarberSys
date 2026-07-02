@@ -143,12 +143,21 @@ export default function SettingsPage() {
               </div>
             ))}
           </div>
-          <form onSubmit={addService} className="mt-3 grid grid-cols-[1fr_70px_70px_auto] gap-2">
-            <Input name="name" placeholder="Servicio" required />
+          <form
+            onSubmit={addService}
+            className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-[1fr_70px_70px_auto]"
+          >
+            <Input name="name" placeholder="Servicio" required className="col-span-2 sm:col-span-1" />
             <Input name="duration" type="number" placeholder="min" defaultValue={30} required />
             <Input name="price" type="number" placeholder="$" defaultValue={30} required />
-            <Button variant="secondary" type="submit" disabled={svcSaving}>
+            <Button
+              variant="secondary"
+              type="submit"
+              disabled={svcSaving}
+              className="col-span-2 sm:col-span-1"
+            >
               <Plus size={14} />
+              <span className="sm:hidden">Añadir</span>
             </Button>
           </form>
         </Card>

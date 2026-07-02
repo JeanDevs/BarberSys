@@ -22,8 +22,8 @@ export default function CustomersPage() {
       </div>
 
       <div className="grid gap-4 lg:grid-cols-3">
-        <Card className={`overflow-hidden ${selected ? 'lg:col-span-2' : 'lg:col-span-3'}`}>
-          <table className="w-full text-sm">
+        <Card className={`overflow-x-auto ${selected ? 'lg:col-span-2' : 'lg:col-span-3'}`}>
+          <table className="w-full min-w-[320px] text-sm">
             <thead>
               <tr className="border-b border-white/[0.06] text-left text-xs text-zinc-500">
                 <th className="px-4 py-3 font-medium">Nombre</th>

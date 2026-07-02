@@ -89,7 +89,7 @@ export default function ConversationsPage() {
 
       <div className="grid gap-4 lg:grid-cols-3">
         {/* Conversation list */}
-        <Card className="h-fit max-h-[560px] overflow-y-auto p-2 lg:col-span-1">
+        <Card className="h-fit max-h-[32vh] overflow-y-auto p-2 lg:col-span-1 lg:max-h-[560px]">
           {(conversations.data ?? []).map((c) => (
             <button
               key={c.id}
@@ -123,20 +123,20 @@ export default function ConversationsPage() {
         </Card>
 
         {/* Chat window */}
-        <Card className="flex h-[560px] flex-col lg:col-span-2">
-          <div className="flex items-center justify-between gap-3 border-b border-white/[0.06] px-4 py-3">
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700">
+        <Card className="flex h-[70vh] flex-col sm:h-[560px] lg:col-span-2">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.06] px-4 py-3">
+            <div className="flex min-w-0 items-center gap-2.5">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700">
                 <Bot size={15} className="text-white" />
               </div>
-              <div>
-                <p className="text-sm font-semibold text-zinc-100">Recepcionista IA</p>
+              <div className="min-w-0">
+                <p className="truncate text-sm font-semibold text-zinc-100">Recepcionista IA</p>
                 <p className="flex items-center gap-1 text-[11px] text-emerald-400">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> en línea
                 </p>
               </div>
             </div>
-            <div className="w-52">
+            <div className="w-full sm:w-52">
               <Select
                 value={phone}
                 onChange={(e) => {
